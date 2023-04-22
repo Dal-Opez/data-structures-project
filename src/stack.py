@@ -32,4 +32,4 @@ class Stack:
 
         :return: данные удаленного элемента
         """
-        pass
+        return self.stack_list.pop(0)
