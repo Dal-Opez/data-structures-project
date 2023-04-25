@@ -16,7 +16,7 @@ class Stack:
 
     def __init__(self):
         """Конструктор класса Stack"""
-        self.stack_list = []
+        self.top = None
 
     def push(self, data):
         """
@@ -24,7 +24,9 @@ class Stack:
 
         :param data: данные, которые будут добавлены на вершину стека
         """
-        self.stack_list.insert(0, data)
+        next_node = self.top
+        new_top = Node(data, next_node)
+        self.top = new_top
 
     def pop(self):
         """
@@ -32,4 +34,4 @@ class Stack:
 
         :return: данные удаленного элемента
         """
-        return self.stack_list.pop(0)
+        # return self.stack_list.pop(0)
