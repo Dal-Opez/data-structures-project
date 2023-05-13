@@ -1,4 +1,5 @@
 from src.queue import Queue
+from src.stack import Stack
 
 if __name__ == '__main__':
     queue = Queue()

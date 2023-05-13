@@ -30,6 +30,14 @@ class Stack:
         new_top = Node(data, next_node)
         self.top = new_top
 
+    def __str__(self):
+        current = self.top
+        items = []
+        while current:
+            items.append(current.data)
+            current = current.next_node
+        return f'Stack({", ".join(items)})'
+
     def pop(self):
         """
         Метод для удаления элемента с вершины стека и его возвращения
