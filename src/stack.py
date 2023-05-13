@@ -1,6 +1,6 @@
+
 class Node:
     """Класс для узла стека"""
-
     def __init__(self, data, next_node):
         """
         Конструктор класса Node
@@ -10,6 +10,8 @@ class Node:
         self.data = data
         self.next_node = next_node
 
+    def __repr__(self):
+        return f"{self.next_node}"
 
 class Stack:
     """Класс для стека"""
@@ -34,4 +36,7 @@ class Stack:
 
         :return: данные удаленного элемента
         """
-        # return self.stack_list.pop(0)
+        data = self.top.data
+        self.top = self.top.next_node
+        return data
+
